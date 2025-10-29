@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VR Physio & Rehab Treatments — evidence-based physiotherapy for faster, safer recovery.">
+  <meta name="author" content="VR Physio & Rehab">
+  <title>VR PHYSIO — Treatments</title>
+
+  <!-- CSS FILES (align with index.html) -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+  <link href="css/modern-redesign.css" rel="stylesheet"><!-- index page style system -->
+
+  <!-- Swiper (used once on page) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- Google Fonts Preconnect (same as index) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    /* --- Page-specific light polish (kept concise) --- */
+    .hero-treatments {
+      background: var(--gradient-primary);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-treatments .orb {
+      position: absolute; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+      filter: blur(0.5px);
+    }
+    .hero-treatments .orb.orb-1 { width: 500px; height: 500px; top: -20%; right: -10%; }
+    .hero-treatments .orb.orb-2 { width: 420px; height: 420px; bottom: -25%; left: -5%; }
+
+    .treatment-row img {
+      width: 100%; height: 100%; object-fit: cover; border-radius: 20px;
+    }
+    .treatment-row .custom-text-box { padding: 1rem 0; }
+
+    .badge-soft {
+      display:inline-block; padding:.35rem .75rem; border-radius:999px;
+      background: rgba(255,255,255,0.18); color:#fff; font-weight:600; font-size:.85rem;
+      border:1px solid rgba(255,255,255,0.25);
+    }
+
+    /* Treatments carousel cards */
+    .treatment-card {
+      display:block; text-decoration:none; color: var(--primary-blue);
+      transition: transform .25s ease;
+    }
+    .treatment-card img {
+      width: 100%; max-width: 260px; height: 180px; object-fit: cover;
+      border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    }
+    .treatment-card h6 { margin-top: .75rem; font-weight: 700; }
+    .treatment-card:hover { transform: translateY(-6px); }
+
+    .swiper { padding-bottom: 56px; }
+    .swiper-button-next, .swiper-button-prev {
+      color: var(--primary-blue); width: 44px; height: 44px; border-radius: 50%;
+      background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    }
+    .swiper-button-next:hover, .swiper-button-prev:hover {
+      background: var(--primary-blue); color:#fff;
+    }
+
+    /* Conditions we treat (glass cards on soft bg) */
+    .conditions-wrap { background: linear-gradient(135deg, #E6F7FF 0%, #F8FAFB 100%); }
+    .condition-box {
+      background: rgba(255,255,255,0.9); border-radius: 16px; padding: 24px; height:100%;
+      box-shadow: 0 6px 18px rgba(0,0,0,.06); transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .condition-box:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,.1); }
+    .condition-box h5 { color: var(--primary-blue); font-weight: 700; }
+
+    /* Book banner (aligned to index CTA) */
+    .book-banner {
+      background: var(--gradient-primary); color: var(--white); text-align:center; position: relative; overflow: hidden;
+      padding: 4.5rem 1rem; border-radius: 20px;
+    }
+    .book-banner .orb { position: absolute; border-radius:50%; background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%); }
+    .book-banner .orb.o1 { width: 520px; height:520px; top:-35%; right:-10%; }
+    .book-banner .orb.o2 { width: 420px; height:420px; bottom:-30%; left:-8%; }
+    .book-banner .btn { padding: 1rem 2.4rem; border-radius: 999px; font-weight: 800; }
+
+    /* Back to top (reuse from index) */
+    #backToTop { position:fixed; bottom:30px; right:30px; width:50px; height:50px; border-radius:50%;
+      display:none; align-items:center; justify-content:center; z-index:999; box-shadow:0 8px 24px rgba(0,153,204,.3);
+      opacity:0; transition: opacity .3s ease;
+    }
+    #backToTop.show { display:flex !important; opacity:1; }
+  </style>
+</head>
+
+<body id="section_1">
+
+  <!-- Top Header Bar (same as index) -->
+  <header class="site-header" style="background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(0, 153, 204, 0.1);">
+    <div class="container">
+      <div class="row align-items-center py-2">
+        <div class="col-lg-8 col-12 d-flex flex-wrap">
+          <p class="d-flex me-4 mb-0 align-items-center">
+            <i class="bi-geo-alt me-2" style="color: var(--primary-blue);"></i>
+            <a href="https://www.google.com/maps/place/Femcity:+Women+%26+Children+Hospitals+in+Hyderabad" target="_blank" style="color: var(--text-secondary); text-decoration: none;">
+              VR Physio and Rehab, Hyderabad
+            </a>
+          </p>
+          <p class="d-flex mb-0 align-items-center">
+            <i class="bi-envelope me-2" style="color: var(--primary-blue);"></i>
+            <a href="mailto:vrphysiorehab@gmail.com" style="color: var(--text-secondary); text-decoration: none;">
+              vrphysiorehab@gmail.com
+            </a>
+          </p>
+        </div>
+        <div class="col-lg-4 col-12 ms-auto d-lg-block d-none">
+          <ul class="social-icon" style="justify-content: flex-end; margin: 0;">
+            <li class="social-icon-item"><a href="#" class="social-icon-link bi-twitter"></a></li>
+            <li class="social-icon-item"><a href="#" class="social-icon-link bi-facebook"></a></li>
+            <li class="social-icon-item"><a href="#" class="social-icon-link bi-instagram"></a></li>
+            <li class="social-icon-item"><a href="#" class="social-icon-link bi-youtube"></a></li>
+            <li class="social-icon-item"><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar (mirrors index) -->
+  <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/Screenshot_2025-10-26_015119-removebg-preview.png" alt="VR PHYSIO AND REHAB Logo" class="logo img-fluid" style="height: 70px; width: auto; max-height: 70px; object-fit: contain;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Treatments.html">Treatments</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#section_contact">Contact</a></li>
+          <li class="nav-item ms-3">
+            <a class="nav-link custom-btn btn" href="book.html">Book Appointment</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-treatments section-padding">
+      <div class="orb orb-1"></div><div class="orb orb-2"></div>
+      <div class="container position-relative" style="z-index:2;">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <span class="badge-soft mb-3">Evidence-based • Personalized • Compassionate</span>
+            <h1 class="mb-3" style="font-weight: 800; color:#fff;">Treatments Tailored To Your Recovery</h1>
+            <p class="mb-4" style="color: rgba(255,255,255,0.95); font-size: 1.1rem;">
+              From post-surgical rehab to sports injury care and women’s health, VR Physio delivers outcome-driven physiotherapy using modern methods and technology.
+            </p>
+            <a href="#core-treatments" class="btn btn-light me-3" style="border-radius: 999px; font-weight:700;">Explore Treatments</a>
+            <a href="book.html" class="btn btn-outline-light" style="border-radius: 999px; font-weight:700;">Book Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Treatments (alternating rows) -->
+    <section id="core-treatments" class="section-padding">
+      <div class="container">
+        <div class="row text-center mb-5">
+          <div class="col-12 scroll-animate">
+            <h2 class="mb-3">Core Physiotherapy Treatments</h2>
+            <p class="text-secondary" style="max-width: 760px; margin:auto;">Hands-on expertise + technology to relieve pain, restore movement, and prevent recurrence — fully personalized to your goals.</p>
+          </div>
+        </div>
+
+        <!-- Pilates Reformer -->
+        <div class="row align-items-center treatment-row mb-5 scroll-animate">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="https://images.pexels.com/photos/4325466/pexels-photo-4325466.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Pilates Reformer Physiotherapy">
+          </div>
+          <div class="col-lg-6">
+            <div class="custom-text-box">
+              <h4 class="fw-bold" style="color: var(--primary-blue);">Pilates – Reformer Therapy</h4>
+              <p>The <strong>Pilates Reformer</strong> strengthens your core, corrects posture, and improves joint stability using guided, low-impact movements — ideal for chronic back/neck pain, prenatal/postnatal, and post-surgery muscle reactivation.</p>
+              <ul class="text-secondary">
+                <li>Core stability & balance</li>
+                <li>Flexibility & posture</li>
+                <li>Safe for all ages</li>
+              </ul>
+              <a href="book.html" class="custom-btn btn mt-2">Book Pilates Session</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Manual Therapy -->
+        <div class="row align-items-center treatment-row flex-lg-row-reverse mb-5 scroll-animate">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="https://images.pexels.com/photos/4325466/pexels-photo-4325466.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Manual Physiotherapy Treatment">
+          </div>
+          <div class="col-lg-6">
+            <div class="custom-text-box">
+              <h4 class="fw-bold" style="color: var(--primary-blue);">Manual Therapy</h4>
+              <p>Advanced hands-on techniques to mobilize soft tissue and joints, reduce pain & stiffness, and restore optimal alignment.</p>
+              <ul class="text-secondary">
+                <li>Joint restrictions & stiffness</li>
+                <li>Trigger point & myofascial release</li>
+                <li>Improved ROM & function</li>
+              </ul>
+              <a href="book.html" class="custom-btn btn mt-2">Book Manual Therapy</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Therapeutic Exercise -->
+        <div class="row align-items-center treatment-row mb-5 scroll-animate">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Therapeutic Exercise">
+          </div>
+          <div class="col-lg-6">
+            <div class="custom-text-box">
+              <h4 class="fw-bold" style="color: var(--primary-blue);">Therapeutic Exercise</h4>
+              <p>Personalized programs to rebuild strength, flexibility, and endurance, monitored for safe, sustainable progress.</p>
+              <ul class="text-secondary">
+                <li>Muscle re-education & mobility</li>
+                <li>Balance & gait training</li>
+                <li>Re-injury prevention</li>
+              </ul>
+              <a href="book.html" class="custom-btn btn mt-2">Start Your Plan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Electrotherapy -->
+        <div class="row align-items-center treatment-row flex-lg-row-reverse scroll-animate">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="https://images.pexels.com/photos/4325466/pexels-photo-4325466.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Electrotherapy and Modalities">
+          </div>
+          <div class="col-lg-6">
+            <div class="custom-text-box">
+              <h4 class="fw-bold" style="color: var(--primary-blue);">Electrotherapy & Advanced Modalities</h4>
+              <p><strong>TENS, IFT, Ultrasound, Cryotherapy</strong> and more — non-invasive options to relieve pain, reduce inflammation, and accelerate tissue healing.</p>
+              <ul class="text-secondary">
+                <li>Pain & inflammation control</li>
+                <li>Nerve stimulation & activation</li>
+                <li>Circulation & edema management</li>
+              </ul>
+              <a href="book.html" class="custom-btn btn mt-2">Explore Modalities</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Patient Education -->
+        <div class="row align-items-center treatment-row mt-5 scroll-animate">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Patient Education and Management">
+          </div>
+          <div class="col-lg-6">
+            <div class="custom-text-box">
+              <h4 class="fw-bold" style="color: var(--primary-blue);">Patient Education & Self-Management</h4>
+              <p>We empower you with posture correction, ergonomic coaching, home exercise, and lifestyle strategies — the foundation of long-term recovery.</p>
+              <ul class="text-secondary">
+                <li>Ergonomics & movement hygiene</li>
+                <li>Home plans & progress tracking</li>
+                <li>Relapse prevention</li>
+              </ul>
+              <a href="book.html" class="custom-btn btn mt-2">Book a Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore Our Treatments Carousel -->
+    <section class="section-padding section-bg scroll-animate">
+  <div class="container text-center">
+    <h2 class="mb-3 fw-bold" style="color: var(--primary-blue);">Explore Our Treatments</h2>
+    <p class="text-secondary mb-5" style="max-width: 700px; margin: auto;">
+      Discover specialized physiotherapy programs designed to restore movement, reduce pain, and help you live better.
+    </p>
+
+    <!-- Swiper Container -->
+    <div class="swiper treatmentSwiper position-relative">
+      <div class="swiper-wrapper">
+
+        <!-- Treatment Items -->
+        <div class="swiper-slide">
+          <a href="orthopedic.html" class="treatment-card">
+            <img src="images/treatments/ortho.jpg" alt="Orthopedic Physiotherapy & Musculoskeletal Rehabilitation">
+            <h6>Orthopedic Physiotherapy & Musculoskeletal Rehabilitation</h6>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="neuro.html" class="treatment-card">
+            <img src="images/treatments/neuro.jpg" alt="Neurological Rehabilitation">
+            <h6>Neurological Rehabilitation</h6>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="pediatric.html" class="treatment-card">
+            <img src="images/treatments/pediatric.jpg" alt="Pediatric Physiotherapy">
+            <h6>Pediatric Physiotherapy</h6>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="geriatric.html" class="treatment-card">
+            <img src="images/treatments/geriatric.jpg" alt="Geriatric Physiotherapy">
+            <h6>Geriatric Physiotherapy</h6>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="womens-health.html" class="treatment-card">
+            <img src="images/treatments/women.jpg" alt="Women’s Health Physiotherapy">
+            <h6>Women’s Health Physiotherapy</h6>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="pilates.html" class="treatment-card">
+            <img src="images/treatments/pilates.jpg" alt="Pilates (Mat & Reformer)">
+            <h6>Pilates (Mat & Reformer)</h6>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="post-surgical.html" class="treatment-card">
+            <img src="images/treatments/post-surgical.jpg" alt="Post-Surgical Rehabilitation">
+            <h6>Post-Surgical Rehabilitation</h6>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="injury.html" class="treatment-card">
+            <img src="images/treatments/injury.jpg" alt="Injury & Pain Management">
+            <h6>Injury & Pain Management</h6>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="dry-needling.html" class="treatment-card">
+            <img src="images/treatments/dry-needling.jpg" alt="Dry Needling Therapy">
+            <h6>Dry Needling Therapy</h6>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="manual-therapy.html" class="treatment-card">
+            <img src="images/treatments/manual.jpg" alt="Manual Therapy">
+            <h6>Manual Therapy</h6>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="therapeutic-exercise.html" class="treatment-card">
+            <img src="images/treatments/exercise.jpg" alt="Therapeutic Exercise">
+            <h6>Therapeutic Exercise</h6>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="electrotherapy.html" class="treatment-card">
+            <img src="images/treatments/electrotherapy.jpg" alt="Electrotherapy & Modalities">
+            <h6>Electrotherapy & Modalities</h6>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+    <!-- Conditions We Treat -->
+    <section class="section-padding conditions-wrap">
+      <div class="container">
+        <div class="row text-center mb-5">
+          <div class="col-12 scroll-animate">
+            <h2 class="mb-3">Conditions We Treat</h2>
+            <p class="text-secondary" style="max-width: 760px; margin:auto;">From sports injuries to neurological disorders, we provide precise, empathetic care across a wide spectrum of conditions.</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 scroll-animate">
+            <div class="condition-box h-100">
+              <h5 class="mb-2"><i class="bi bi-person-walking me-2"></i> Musculoskeletal Conditions</h5>
+              <ul class="text-secondary mb-0">
+                <li>Back & neck pain, sciatica, disc issues</li>
+                <li>Frozen shoulder, rotator cuff injuries</li>
+                <li>Knee arthritis, ligament injuries</li>
+                <li>Postural dysfunctions</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 scroll-animate">
+            <div class="condition-box h-100">
+              <h5 class="mb-2"><i class="bi bi-bicycle me-2"></i> Sports & Accidental Injuries</h5>
+              <ul class="text-secondary mb-0">
+                <li>ACL/MCL, meniscus rehab</li>
+                <li>Sprains, strains & muscle tears</li>
+                <li>Post-fracture physiotherapy</li>
+                <li>Return-to-sport conditioning</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 scroll-animate">
+            <div class="condition-box h-100">
+              <h5 class="mb-2"><i class="bi bi-brain me-2"></i> Neurological Rehabilitation</h5>
+              <ul class="text-secondary mb-0">
+                <li>Stroke & hemiplegia</li>
+                <li>Parkinson’s & balance training</li>
+                <li>Spinal cord injury recovery</li>
+                <li>Facial palsy management</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 scroll-animate">
+            <div class="condition-box h-100">
+              <h5 class="mb-2"><i class="bi bi-hospital me-2"></i> Post-Operative Rehabilitation</h5>
+              <ul class="text-secondary mb-0">
+                <li>Knee & hip replacements</li>
+                <li>Spine & disc surgeries</li>
+                <li>Shoulder arthroscopy rehab</li>
+                <li>Pelvic floor dysfunction</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 scroll-animate">
+            <div class="condition-box h-100">
+              <h5 class="mb-2"><i class="bi bi-gender-female me-2"></i> Women’s Health Physiotherapy</h5>
+              <ul class="text-secondary mb-0">
+                <li>Postnatal care & C-section recovery</li>
+                <li>Pelvic floor strengthening</li>
+                <li>Diastasis recti management</li>
+                <li>Menopause-related MSK care</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="book-banner">
+          <div class="orb o1"></div><div class="orb o2"></div>
+          <div class="position-relative" style="z-index:2;">
+            <h2 class="mb-3" style="font-weight:800;">Ready to Begin Your Recovery?</h2>
+            <p class="mb-4" style="color: rgba(255,255,255,.95); font-size: 1.1rem; max-width: 720px; margin: 0 auto;">
+              Book a one-on-one consultation with our experienced physiotherapists today and take the first step toward a pain-free life.
+            </p>
+            <a href="book.html" class="btn btn-light me-2"><i class="bi bi-calendar-check me-2"></i>Book Consultation</a>
+            <a href="index.html#section_contact" class="btn btn-outline-light">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modern Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <img src="images/Screenshot_2025-10-26_015119-removebg-preview.png" alt="VR PHYSIO AND REHAB Logo" class="logo img-fluid" style="height: 70px; width: auto; max-height: 70px; object-fit: contain;">
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.8;">
+                        VR Physio & Rehab - Your trusted partner in physiotherapy and rehabilitation. Beyond Pain, Towards Potential.
+                    </p>
+                    <ul class="social-icon">
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-twitter"></a>
+                        </li>
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-facebook"></a>
+                        </li>
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-instagram"></a>
+                        </li>
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-linkedin"></a>
+                        </li>
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-whatsapp"></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="About.html" class="footer-link">About Us</a></li>
+                        <li><a href="Services.html" class="footer-link">Our Services</a></li>
+                        <li><a href="Treatments.html" class="footer-link">Treatments</a></li>
+                        <li><a href="Pilates.html" class="footer-link">Pilates Studio</a></li>
+                        <li><a href="book.html" class="footer-link">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <h5 class="footer-title">Our Services</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="Services.html" class="footer-link">Orthopedic Physiotherapy</a></li>
+                        <li><a href="Services.html" class="footer-link">Neurological Rehabilitation</a></li>
+                        <li><a href="Services.html" class="footer-link">Sports Injury Recovery</a></li>
+                        <li><a href="Services.html" class="footer-link">Women's Health Care</a></li>
+                        <li><a href="Services.html" class="footer-link">Home Care Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <p style="color: rgba(255, 255, 255, 0.8); display: flex; align-items :start; margin-bottom: 0.75rem;">
+                        <i class="bi-geo-alt me-2" style="margin-top: 4px;"></i>
+                        <span>Jubilee Hills, Hyderabad<br>Telangana, India</span>
+                    </p>
+                    <p style="color: rgba(255, 255, 255, 0.8); display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <i class="bi-telephone me-2"></i>
+                        <a href="tel:+919876543210" class="footer-link">+91 98765 43210</a>
+                    </p>
+                    <p style="color: rgba(255, 255, 255, 0.8); display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <i class="bi-envelope me-2"></i>
+                        <a href="mailto:vrphysiorehab@gmail.com" class="footer-link">vrphysiorehab@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="copyright text-center">
+                <p style="margin: 0;">&copy; 2025 VR Physio & Rehab. All Rights Reserved. | Designed with care for your recovery journey</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="backToTop" class="custom-btn" style="position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%; display: none; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 8px 24px rgba(0, 153, 204, 0.3); opacity: 0; transition: opacity 0.3s ease;">
+        <i class="bi bi-arrow-up" style="font-size: 1.5rem;"></i>
+    </a>
+
+    <style>
+    #backToTop.show {
+        display: flex !important;
+        opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+        .navbar-brand .logo {
+            height: 45px;
+            max-height: 50px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .navbar-brand .logo {
+            height: 40px;
+            max-height: 45px;
+        }
+    }
+    </style>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+    
+    <!-- Chart.js for Data Visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Modern Animations -->
+    <script src="js/modern-animations.js"></script>
+
+</body>
+</html>
