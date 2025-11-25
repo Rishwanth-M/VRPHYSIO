@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --fg: #111827;
+  --brand: #059669;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-charcoal antialiased;
+}
+
+.container-responsive {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold shadow-soft transition;
+}
+
+.btn-brand {
+  @apply bg-emerald text-white hover:bg-emerald-700;
+}
+
+.card {
+  @apply rounded-2xl bg-white shadow-soft border border-gray-100;
+}
+
+.prose h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.prose ul,
+.prose ol {
+  margin-left: 1.25rem;
+}
+
