@@ -55,7 +55,7 @@ export default function AboutPage() {
 
         <div className="relative h-64 rounded-2xl overflow-hidden">
           <Image
-            src="https://res.cloudinary.com/dwse1tffo/image/upload/v1763914569/IMG-20251030-WA0004_apc7uu.jpg"
+            src="https://res.cloudinary.com/dwse1tffo/image/upload/v1764081256/WhatsApp_Image_2025-11-25_at_19.09.59_90811aaf_vx4tcg.jpg"
             alt="VR Physio Clinic"
             fill
             className="object-cover object-[50%_30%]"
