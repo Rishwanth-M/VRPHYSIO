@@ -84,7 +84,7 @@ export default function PilatesPage() {
       <header className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
         <div className="relative h-52 md:h-72">
           <Image
-            src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1600&auto=format&fit=crop"
+            src="https://res.cloudinary.com/dwse1tffo/image/upload/v1764088537/trainer-pilates-woman-yoga-logo-identity-vector_rtyj6m.jpg"
             alt="Pilates at VR Physio Rehab"
             fill
             className="object-cover"
@@ -95,7 +95,7 @@ export default function PilatesPage() {
             Pilates at VR Physio Rehab
           </h1>
           <p className="text-gray-700 mt-2 max-w-3xl text-base md:text-lg">
-            Experience clinical Pilates with Reformer, Ladder Barrel, Mat and VR-assisted
+            Experience clinical Pilates with Reformer, Ladder Barrel and Mat
             sessions — designed by physiotherapists to improve posture, core strength,
             stability and confidence in movement.
           </p>
@@ -196,16 +196,12 @@ export default function PilatesPage() {
       <section className="relative overflow-hidden rounded-2xl border border-gray-100 bg-emerald/10 p-6 md:p-10">
         <div className="grid md:grid-cols-3 gap-6 items-center">
           <div className="md:col-span-2">
-            <h2 className="text-2xl font-semibold">VR-Assisted Pilates</h2>
+            <h2 className="text-2xl font-semibold">VR Pilates at VR Physio Rehab</h2>
             <p className="mt-2 text-gray-700 leading-relaxed">
-              As a VR-focused physiotherapy center, we integrate Virtual Reality with Pilates
-              to create engaging, feedback-driven sessions. VR helps you understand your
-              posture, balance and movement patterns in real time, while Pilates builds
-              strength and control.
+              At VR Physio Rehab, our Pilates program focuses on building core strength, posture correction, flexibility, and mindful movement. Pilates is one of the most effective low-impact systems for improving alignment and reducing pain.
             </p>
             <p className="mt-2 text-gray-700">
-              This combination is especially useful for patients with fear of movement,
-              balance problems, chronic pain, and those needing extra motivation.
+              Our physiotherapists personalize each Pilates session to your condition—whether it’s back pain, neck pain, postural issues, sports rehab, or general fitness. The goal is to help you move better, feel stronger, and stay injury-free.
             </p>
             <div className="mt-4">
               <Link href="/book-appointment" className="text-emerald font-medium">
@@ -215,12 +211,12 @@ export default function PilatesPage() {
           </div>
 
           <div className="relative h-44 md:h-56 rounded-2xl overflow-hidden">
-            <Image
-              src="https://res.cloudinary.com/dwse1tffo/image/upload/v1763908360/How_Virtual_Reality_VR_Is_Transforming_Modern_Physiotherapy_nbqvwc.jpg"
-              alt="VR Pilates"
-              fill
-              className="object-cover"
-            />
+  <Image
+    src="https://res.cloudinary.com/dwse1tffo/image/upload/v1763797044/IMG-20251122-WA0003_brfmvu.jpg"
+    alt="VR Pilates"
+    fill
+    className="object-cover object-[center_30%]"
+  />
           </div>
         </div>
       </section>
