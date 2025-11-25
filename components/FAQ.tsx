@@ -10,11 +10,6 @@ export default function FAQ() {
         "We treat orthopedic injuries, post-surgical cases, neurological conditions (stroke, Parkinson’s), pediatric delays, women’s health concerns, chronic pain, sports injuries, and age-related mobility issues. We also offer Pilates for strength, posture, and recovery."
     },
     {
-      question: "How does Virtual Reality (VR) physiotherapy work?",
-      answer:
-        "VR therapy uses immersive, interactive exercises that improve balance, gait, movement confidence, and pain perception. It helps patients recover faster by providing real-time feedback and safe movement practice."
-    },
-    {
       question: "How long is each physiotherapy session?",
       answer:
         "A typical session lasts 40–50 minutes. This includes assessment, hands-on treatment if required, exercise therapy, and reviewing home exercises tailored to your condition."
