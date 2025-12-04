@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   const heroImages = [
-    "https://res.cloudinary.com/dwse1tffo/image/upload/v1763796321/IMG-20251120-WA0006_qcgjus.jpg",
+    "https://res.cloudinary.com/dwse1tffo/image/upload/v1764081256/WhatsApp_Image_2025-11-25_at_19.09.59_90811aaf_vx4tcg.jpg",
+    "https://res.cloudinary.com/dwse1tffo/image/upload/v1764825122/WhatsApp_Image_2025-12-01_at_14.49.19_3bc2a3db_qsoxtk.jpg",
     "https://res.cloudinary.com/dwse1tffo/image/upload/v1763796490/IMG-20251122-WA0013_hw8mux.jpg",
     "https://res.cloudinary.com/dwse1tffo/image/upload/v1763796489/IMG-20251122-WA0001_aspmz7.jpg",
-    "https://res.cloudinary.com/dwse1tffo/image/upload/v1763796351/IMG-20251107-WA0019_q65kv7.jpg",
-    "https://res.cloudinary.com/dwse1tffo/image/upload/v1763914569/IMG-20251030-WA0004_apc7uu.jpg",
+    "https://res.cloudinary.com/dwse1tffo/image/upload/v1764823900/WhatsApp_Image_2025-12-01_at_14.03.16_009a4302_ahivj0.jpg",
   ];
 
   const [imgIndex, setImgIndex] = useState(0);
