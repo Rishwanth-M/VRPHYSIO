@@ -250,7 +250,7 @@ export default function Home() {
               Experience VR Pilates in Hyderabad
             </h2>
             <p className="mt-2 text-gray-700 text-sm">
-              We blend Virtual Reality with classical Pilates to build core
+              We blend Experience and care with classical Pilates to build core
               control, balance, posture and confidence in a safe, engaging
               environment — ideal for spine rehab, postural issues and
               controlled strengthening.
