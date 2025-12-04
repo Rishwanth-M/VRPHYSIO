@@ -14,7 +14,7 @@ export default function AboutPage() {
       <header className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
         <div className="relative h-56 md:h-72">
           <Image
-            src="https://res.cloudinary.com/dwse1tffo/image/upload/v1763796321/IMG-20251120-WA0006_qcgjus.jpg"
+            src="https://res.cloudinary.com/dwse1tffo/image/upload/v1764823900/WhatsApp_Image_2025-12-01_at_14.03.16_009a4302_ahivj0.jpg"
             alt="VR Physio Rehab"
             fill
             className="object-cover object-[50%_30%]"
@@ -33,7 +33,7 @@ export default function AboutPage() {
         <div>
           <h2 className="text-2xl font-semibold">Our Story</h2>
           <p className="mt-3 text-gray-700 leading-relaxed">
-            VR Physio Rehab was founded with a single mission — to bring world-class,
+            VR Physio Rehab was founded by Dr. Venkat, PT with a single mission — to bring world-class,
             ethical, research-backed physiotherapy to every individual in South India.
             What started as a small clinic has evolved into a centre known for evidence-based
             rehabilitation, cutting-edge VR therapy, and disciplined Pilates training.
@@ -105,25 +105,29 @@ export default function AboutPage() {
 
       {/* DIRECTOR SECTION */}
       <section>
-        <h2 className="text-2xl font-semibold mb-3">Meet Our Director</h2>
+        <h2 className="text-2xl font-semibold mb-3">Meet Our Founder</h2>
         <div className="grid md:grid-cols-3 gap-6 items-start">
           <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-md">
-            <Image
-              src="https://res.cloudinary.com/dwse1tffo/image/upload/v1763998821/Airbrush-IMAGE-ENHANCER-1763962601460-1763962601461_qzrchs.png"
-              alt="Dr. Venkat PT"
-              fill
-              className="object-cover"
-            />
+            <div className="relative w-full h-[400px] overflow-hidden">
+  <Image
+    src="https://res.cloudinary.com/dwse1tffo/image/upload/v1764824207/WhatsApp_Image_2025-12-01_at_14.45.40_88e4581a-removebg-preview_ixojc9.png"
+    alt="Dr. Venkat PT"
+    fill
+    className="object-contain translate-y-18 scale-150"
+  />
+</div>
+
           </div>
           <div className="md:col-span-2">
-            <h3 className="text-xl font-semibold">Dr. Venkat, MPT (Ortho)</h3>
+            <h3 className="text-xl font-semibold">Dr. Venkat, PT</h3>
+            <h4>BPT, MPT, ORTHO, MIAP</h4>
             <p className="mt-2 text-gray-700">
-              A renowned physiotherapist with 15+ years of clinical expertise in orthopaedics,
+              A renowned physiotherapist with 17+ years of clinical expertise in orthopaedics,
               sports medicine, spine rehabilitation, manual therapy, and post-surgical care.
             </p>
 
             <p className="mt-2 text-gray-700">
-              Dr. Varun leads the clinical team with a deep belief in education, movement science,
+              Dr. Venkat leads the clinical team with a deep belief in education, movement science,
               and outcome-driven therapy. He has consulted over <strong>5000+ patients</strong> 
               and continues to bring global physiotherapy principles into local practice.
             </p>
@@ -154,7 +158,7 @@ export default function AboutPage() {
       <section className="grid md:grid-cols-4 gap-4 text-center">
         {[
           { label: "Patients Treated", value: "5000+" },
-          { label: "Clinical Experience", value: "15+ Years" },
+          { label: "Clinical Experience", value: "17+ Years" },
           { label: "Specialised Programs", value: "20+" },
           { label: "Cities Served", value: "5 States" }
         ].map((s, i) => (
