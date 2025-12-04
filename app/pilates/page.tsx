@@ -45,8 +45,8 @@ const classTypes = [
     desc: "Condition-specific Pilates designed by physiotherapists for post-surgery cases, chronic pain, spine issues, shoulder instability and sports injuries."
   },
   {
-    title: "VR-Assisted Pilates",
-    desc: "Combines traditional Pilates with VR-based feedback for posture, balance and movement awareness. Makes rehab engaging, measurable and immersive."
+    title: "Pre and Postnatal Pilates",
+    desc: "Pre and Postnatal Pilates focuses on safe, controlled movements that strengthen the core, improve posture, and support the physical changes during and after pregnancy."
   },
   {
     title: "Performance & Conditioning Pilates",
