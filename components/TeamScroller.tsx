@@ -3,33 +3,33 @@ import Image from "next/image";
 
 const members = [
   {
-    name: "Dr. Puranik Shraddha ",
-    role: "Physiotherapy Consultant",
+    name: "Dr. Puranik Shraddha, PT ",
+    role: "HOD",
     img: "https://res.cloudinary.com/dwse1tffo/image/upload/v1763795336/IMG-20251120-WA0010_nn1aqa.jpg"
   },
   {
-    name: "Dr. Palyam Sonujishi",
-    role: "Physiotherapy Consultant",
-    img: "https://res.cloudinary.com/dwse1tffo/image/upload/v1763795336/IMG-20251120-WA0013_qr0z7w.jpg"
-  },
-  {
-    name: "Dr. Azmeera Srilatha ",
-    role: "Physiotherapy Consultant",
+    name: "Dr. Azmeera Srilatha, PT ",
+    role: "Sr. Physiotherapist",
     img: "https://res.cloudinary.com/dwse1tffo/image/upload/v1763795336/IMG-20251120-WA0012_pkmutm.jpg"
   },
   {
+    name: "Dr. Palyam Sonujishi",
+    role: "Physiotherapist",
+    img: "https://res.cloudinary.com/dwse1tffo/image/upload/v1763795336/IMG-20251120-WA0013_qr0z7w.jpg"
+  },
+  {
     name: "Dr. Thudum Srilatha",
-    role: "Physiotherapy Consultant",
+    role: "Physiotherapist",
     img: "https://res.cloudinary.com/dwse1tffo/image/upload/v1763795337/IMG-20251120-WA0009_kfavui.jpg"
   },
   {
     name: "Dr. Pilli Manipriya",
-    role: "Physiotherapy Consultant",
+    role: "Physiotherapist",
     img: "https://res.cloudinary.com/dwse1tffo/image/upload/v1763795336/IMG-20251120-WA0011_xy4ho8.jpg"
   },
   {
     name: "Dr. Gadikota Bramhananda Reddy",
-    role: "Physiotherapy Consultant",
+    role: "Physiotherapist",
     img: "https://res.cloudinary.com/dwse1tffo/image/upload/v1763909264/WhatsApp_Image_2025-11-22_at_12.42.16_70dafeb7_rnez5t.jpg"
   },
 ];
