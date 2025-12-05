@@ -12,6 +12,72 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+  slug: "rossette-kyomya-physiotherapy-journey",
+  title: "Healing & Hope — My Physiotherapy Journey After Spine Surgery",
+  description:
+    "A deeply personal story of courage, emotional healing, and physiotherapy recovery after spine surgery, guided with compassion and expertise.",
+  image:
+    "https://res.cloudinary.com/dwse1tffo/image/upload/v1764921949/Screenshot_2025-12-05_133425_w60me6.png",
+  author: "Rossette Kyomya",
+  date: "2025-01-12",
+  tags: ["Spine Surgery Rehab", "Patient Story", "Physiotherapy", "Emotional Recovery"],
+  summary:
+    "A powerful real-life recovery story from Kampala to Hyderabad — where physiotherapy, emotional support, and compassionate care transformed a painful journey into one of strength and healing.",
+  content: `
+Rossette Kyomya, a retired teacher from Kampala, Uganda, travelled to Hyderabad, India in 2022 for spine surgery. At 60 years old, she faced physical pain, emotional uncertainty, and the challenges of healing far from home. What followed was a journey of strength, compassion, and renewed hope.
+
+## A Difficult Beginning
+
+After the spine operation, movement was painful, slow, and frightening. Simple daily tasks became overwhelming. Being far from home only added to the emotional strain. Rossette describes this early phase as one filled with fragility, fear, and uncertainty.
+
+Yet within this difficult period, she found reassurance and expert guidance through Dr. Venkat PT of **VR PhysioRehab INDIA**.
+
+## Gentle Guidance, Steady Progress
+
+From the very first physiotherapy session, Dr. Venkat demonstrated not only clinical expertise but deep empathy.  
+He:
+
+- Explained each exercise clearly  
+- Adjusted every movement to her comfort  
+- Provided reassurance during moments of fear  
+- Helped rebuild confidence step by step  
+
+His approach created a safe environment for both physical and emotional recovery.
+
+## Support From a Loving Partner
+
+Rossette’s husband, **Mr. Sande Kyomya**, played a vital role in her healing journey. His continuous care, encouragement, and presence offered emotional strength during one of the most challenging phases of her life.
+
+She expresses profound gratitude for his devotion and unwavering support throughout her recovery.
+
+## More Than Treatment — A Journey of Emotional Healing
+
+Physiotherapy extended beyond physical exercises.  
+Being far from Uganda, recovering from major spine surgery, often made Rossette anxious and overwhelmed. But Dr. Venkat understood that:
+
+> Healing the spine also requires healing the spirit.
+
+His patience, kindness, and understanding helped restore not only mobility but emotional resilience. He also prepared her with exercises and guidance to continue her recovery independently once she returned home — ensuring long-term progress and confidence.
+
+## A Testament of Deep Gratitude
+
+Today, Rossette reflects on her journey with heartfelt appreciation.
+
+- Her **spine is healed**  
+- Her **mobility is restored**  
+- Her **spirit is uplifted**  
+
+She credits:
+
+- **Apollo Hospital** – for successful surgery  
+- **Dr. Venkat PT** – for expert physiotherapy and emotional support  
+- **Her husband, Mr. Sande Kyomya** – for strength, love, and devotion  
+
+Her experience stands as a reminder that true healing happens when **skill, compassion, and human connection come together**.
+
+`
+},
+  {
     slug: "latest-posture-updates-2025",
     title: "Posture in 2025: Why ‘Perfect Posture’ Is Outdated and What Actually Matters",
     description:
