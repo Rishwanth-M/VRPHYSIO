@@ -214,19 +214,21 @@ export default function Home() {
           {posts.slice(0, 3).map((p) => (
             <Link
               key={p.slug}
-              href={`/blog/${p.slug}`}
+              href={`/blog`}
               className="rounded-2xl border border-gray-100 bg-white shadow-soft overflow-hidden flex flex-col"
               aria-label={`Read blog: ${p.title}`}
             >
-              <div className="relative h-40">
-                <Image
-                  src={p.image}
-                  alt={p.title}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 33vw, 100vw"
-                />
-              </div>
+              <div className="relative h-64">
+  <Image
+    src={p.image}
+    alt={p.title}
+    fill
+    className="object-cover"
+    style={{ objectPosition: "center 28%" }} 
+    sizes="(min-width: 1024px) 33vw, 100vw"
+  />
+</div>
+
               <div className="p-4 flex-1 flex flex-col">
                 <div className="font-semibold text-sm">{p.title}</div>
                 <p className="text-xs text-gray-600 mt-1 line-clamp-3">
