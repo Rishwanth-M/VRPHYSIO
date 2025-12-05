@@ -101,7 +101,7 @@ export default function BlogPage() {
                     src={post.image}
                     alt={post.title}
                     fill
-                    className="object-cover"
+                    className="object-contain bg-black/5"
                   />
                 </div>
 
