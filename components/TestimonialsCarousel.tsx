@@ -1,27 +1,48 @@
 "use client";
 import { useState, useEffect, useRef, TouchEvent } from "react";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react"; // uses lucide icons (already available in your project)
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
+// ⭐ Real Google-style reviews
 const data = [
   {
-    name: "Arjun K.",
-    text: "Recovered from ACL surgery with confidence. Personalized care was superb!",
+    name: "B Suresh Kumar",
+    text: "I underwent PCL and partial meniscectomy surgery. Home physiotherapy from VR Physio Rehab helped me recover extremely well.",
     rating: 5,
   },
   {
-    name: "Sneha P.",
-    text: "VR Pilates helped my chronic back pain. Gentle yet effective.",
+    name: "Gadikota Bramha Reddy",
+    text: "I visited for my rotator cuff injury. My shoulder pain reduced a lot and mobility improved significantly within a few sessions.",
     rating: 5,
   },
   {
-    name: "Rahul S.",
-    text: "Friendly team, advanced equipment and fast results.",
-    rating: 4,
+    name: "Anuradha Devi",
+    text: "Dr. Venkat treated me and my mom with great care. His experience and approach made a huge difference in our recovery.",
+    rating: 5,
   },
   {
-    name: "Meera T.",
-    text: "Home visits were a lifesaver for my grandmother’s rehab.",
+    name: "Anantha Sarma",
+    text: "After my total knee replacement for both knees, VR Physio Rehab helped me walk confidently again. Excellent physiotherapy.",
+    rating: 5,
+  },
+  {
+    name: "Bujji",
+    text: "Venkat garu did a fabulous job for my ACL rehab. He supported me even after treatment and boosted my confidence.",
+    rating: 5,
+  },
+  {
+    name: "Charles Antony",
+    text: "Very professional physiotherapy service. Venkat explains everything clearly and ensures safe, steady progress.",
+    rating: 5,
+  },
+  {
+    name: "Jhansi Alluri",
+    text: "We used Venkat’s services for my mother’s knee replacement rehab. Extremely patient, skilled and encouraging.",
+    rating: 5,
+  },
+  {
+    name: "C Priyanka",
+    text: "Very good team with excellence in treating patients. Strongly recommend VR Physio Rehab!",
     rating: 5,
   },
 ];
@@ -31,21 +52,29 @@ export default function TestimonialsCarousel() {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const touchStartX = useRef(0);
 
+  // ⭐ Auto Slide
   const startAuto = () => {
     intervalRef.current = setInterval(() => {
       setI((prev) => (prev + 1) % data.length);
     }, 4500);
   };
 
-  const stopAuto = () => intervalRef.current && clearInterval(intervalRef.current);
+  const stopAuto = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
 
   useEffect(() => {
-  startAuto();
-  return () => {
-    stopAuto(); // always returns void
-  };
-}, []);
+    startAuto();
+    return () => stopAuto();
+  }, []);
 
+  // ⭐ Manual Buttons
+  const next = () => setI((prev) => (prev + 1) % data.length);
+  const prev = () =>
+    setI((prev) => (prev - 1 + data.length) % data.length);
 
   // ⭐ Swipe logic
   const handleTouchStart = (e: TouchEvent) => {
@@ -54,12 +83,9 @@ export default function TestimonialsCarousel() {
   };
 
   const handleTouchEnd = (e: TouchEvent) => {
-    const touchEndX = e.changedTouches[0].clientX;
-    const diff = touchStartX.current - touchEndX;
-
-    if (diff > 50) setI((prev) => (prev + 1) % data.length); // Swipe Left → Next
-    if (diff < -50) setI((prev) => (prev - 1 + data.length) % data.length); // Swipe Right → Prev
-
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (diff > 50) next();
+    if (diff < -50) prev();
     startAuto();
   };
 
@@ -81,23 +107,37 @@ export default function TestimonialsCarousel() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
+      {/* Left Button */}
+      <button
+        onClick={prev}
+        className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white shadow hover:bg-gray-50"
+      >
+        <ChevronLeft className="h-5 w-5" />
+      </button>
+
+      {/* Right Button */}
+      <button
+        onClick={next}
+        className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white shadow hover:bg-gray-50"
+      >
+        <ChevronRight className="h-5 w-5" />
+      </button>
+
+      {/* Animated Review */}
       <motion.div
         key={i}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.45 }}
       >
-        {/* Star Rating */}
         <div className="flex justify-center gap-1 mb-3">
           {renderStars(data[i].rating)}
         </div>
 
-        {/* Review Text */}
         <p className="text-gray-700 italic text-sm sm:text-base leading-relaxed">
           “{data[i].text}”
         </p>
 
-        {/* Reviewer Name */}
         <p className="mt-4 font-semibold text-gray-900">
           — {data[i].name}
         </p>
