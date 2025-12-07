@@ -84,7 +84,17 @@ export default function ServicesPage() {
             </CardHeader>
             <CardContent className="text-gray-700">
               Stroke, Parkinson’s, spinal cord injury and neuropathy rehabilitation using neuromuscular
-              re-education, balance training, gait therapy and cognitive-motor retraining at home.
+              re-education, balance training, gait training and cognitive-motor retraining at home.
+            </CardContent>
+          </Card>
+
+          {/* 5. Telephysiotherapy */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Telephysiotherapy (Online)</CardTitle>
+            </CardHeader>
+            <CardContent className="text-gray-700">
+              Convenient online consultation and therapy sessions for patients who cannot visit the clinic. Includes assessment, customized exercise prescription, and real-time guidance via secure video calls.
             </CardContent>
           </Card>
         </div>
@@ -100,16 +110,6 @@ export default function ServicesPage() {
         </p>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {/* 1. VR Rehabilitation */}
-          <Card>
-            <CardHeader>
-              <CardTitle>VR Rehabilitation</CardTitle>
-            </CardHeader>
-            <CardContent className="text-gray-700">
-              Virtual Reality therapy for balance, gait, motor learning, chronic pain,
-              and neurological recovery. Safe, engaging and clinically-supervised.
-            </CardContent>
-          </Card>
 
           {/* 2. Laser Therapy */}
           <Card>
@@ -133,17 +133,6 @@ export default function ServicesPage() {
             </CardContent>
           </Card>
 
-          {/* 4. Hydrotherapy */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Hydrotherapy</CardTitle>
-            </CardHeader>
-            <CardContent className="text-gray-700">
-              Water-based therapy that reduces joint load, supports movement and helps patients
-              with arthritis, neurological issues, post-op stiffness and weakness.
-            </CardContent>
-          </Card>
-
           {/* 5. Electrotherapy */}
           <Card>
             <CardHeader>
@@ -163,6 +152,36 @@ export default function ServicesPage() {
             <CardContent className="text-gray-700">
               Reformer, Ladder Barrel and Mat Pilates for posture correction, core strength,
               mobility, balance and injury prevention. Designed for beginners to athletes.
+            </CardContent>
+          </Card>
+
+          {/* 5. Telephysiotherapy */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Telephysiotherapy (Online)</CardTitle>
+            </CardHeader>
+            <CardContent className="text-gray-700">
+              Convenient online consultation and therapy sessions for patients who cannot visit the clinic. Includes assessment, customized exercise prescription, and real-time guidance via secure video calls.
+            </CardContent>
+          </Card>
+
+          {/* 6. Strength Training */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Strength Training & Conditioning</CardTitle>
+            </CardHeader>
+            <CardContent className="text-gray-700">
+              Personalized programs using weights, resistance bands, and bodyweight exercises to build muscle mass, increase bone density, and enhance overall physical power and endurance.
+            </CardContent>
+          </Card>
+
+{/* 7. Functional Training */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Functional Training</CardTitle>
+            </CardHeader>
+            <CardContent className="text-gray-700">
+              Exercises designed to improve daily life movements, focusing on core stability, balance, and coordination. Ideal for returning to sport, work, or simple daily activities with confidence.
             </CardContent>
           </Card>
         </div>
