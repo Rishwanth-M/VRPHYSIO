@@ -15,7 +15,7 @@ const items = [
   },
   {
     title: "Pediatric Physiotherapy",
-    image: "https://res.cloudinary.com/dwse1tffo/image/upload/v1763905900/Pediatric_Physiotherapy_vmth9z.jpg",
+    image: "https://res.cloudinary.com/dwse1tffo/image/upload/v1765076124/pediatric_fbgmrn.jpg",
     href: "/treatments"
   },
   {
@@ -60,7 +60,7 @@ const items = [
   },
   {
     title: "Electrotherapy & Modalities",
-    image: "https://res.cloudinary.com/dwse1tffo/image/upload/v1763905900/Electrotherapy_Modalities_dj1phr.jpg",
+    image: "https://res.cloudinary.com/dwse1tffo/image/upload/v1765076124/electro_pcpeir.jpg",
     href: "/treatments"
   }
 ];
