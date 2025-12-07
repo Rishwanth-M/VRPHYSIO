@@ -33,18 +33,8 @@ export default function AboutPage() {
         <div>
           <h2 className="text-2xl font-semibold">Our Story</h2>
           <p className="mt-3 text-gray-700 leading-relaxed">
-            VR Physio Rehab was founded by Dr. Venkat, PT with a single mission — to bring world-class,
-            ethical, research-backed physiotherapy to every individual in South India.
-            What started as a small clinic has evolved into a centre known for evidence-based
-            rehabilitation, cutting-edge VR therapy, and disciplined Pilates training.
-          </p>
-
-          <p className="mt-3 text-gray-700 leading-relaxed">
-            Our approach blends biomechanics, neuroscience, physical conditioning, 
-            manual therapy, and advanced digital tools to deliver measurable outcomes.
-            We follow international standards and integrate NABH-aligned protocols
-            to ensure accuracy, safety, and consistency.
-          </p>
+    VR Physio Rehab was founded by <b>Dr. Venkat, PT</b>, who previously worked at <b>Apollo Hospital, Jubilee Hills, Hyderabad, India</b> in various departments. The clinic was established with a single mission — to bring world-class, ethical, <b>research-based</b> physiotherapy to every individual in South India. What started as a small clinic has evolved into a center known for evidence-based rehabilitation, cutting-edge VR therapy, and disciplined Pilates training. <b>We follow international standards like JCI and are integrated with NABH guidelines.</b>
+</p>
 
           <p className="mt-3 text-gray-700 leading-relaxed">
             Every patient at VR Physio Rehab receives a customised treatment pathway —
@@ -110,17 +100,17 @@ export default function AboutPage() {
           <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-md">
             <div className="relative w-full h-[400px] overflow-hidden">
   <Image
-    src="https://res.cloudinary.com/dwse1tffo/image/upload/v1764824207/WhatsApp_Image_2025-12-01_at_14.45.40_88e4581a-removebg-preview_ixojc9.png"
+    src="https://res.cloudinary.com/dwse1tffo/image/upload/v1765075882/WhatsApp_Image_2025-12-06_at_13.42.00_96b80924_ubx50d.jpg"
     alt="Dr. Venkat PT"
     fill
-    className="object-contain translate-y-18 scale-150"
-  />
+    className="object-contain translate-y-18 scale-150 translate-x-4"
+/>
 </div>
 
           </div>
           <div className="md:col-span-2">
-            <h3 className="text-xl font-semibold">Dr. Venkat, PT</h3>
-            <h4>BPT, MPT, ORTHO, MIAP</h4>
+            <h3 className="text-xl font-semibold">Dr. Venkat PT</h3>
+            <h4>MPT (ORTHO), MIAP</h4>
             <p className="mt-2 text-gray-700">
               A renowned physiotherapist with 17+ years of clinical expertise in orthopaedics,
               sports medicine, spine rehabilitation, manual therapy, and post-surgical care.
@@ -128,13 +118,12 @@ export default function AboutPage() {
 
             <p className="mt-2 text-gray-700">
               Dr. Venkat leads the clinical team with a deep belief in education, movement science,
-              and outcome-driven therapy. He has consulted over <strong>5000+ patients</strong> 
-              and continues to bring global physiotherapy principles into local practice.
+              and outcome-driven therapy. He has consulted over <strong>5000+ patients </strong> 
+               and continues to bring global physiotherapy principles into local practice.
             </p>
 
             <ul className="mt-3 text-gray-700 list-disc pl-5 space-y-1">
               <li>NABH-aligned rehabilitation protocols</li>
-              <li>Advanced training in VR rehabilitation & movement analytics</li>
               <li>Expertise in ACL rehab, shoulder instability & spine care</li>
               <li>Mentor to junior physiotherapists and students</li>
               <li>Advocate for evidence-based and ethical physiotherapy</li>
