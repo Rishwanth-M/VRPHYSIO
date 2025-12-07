@@ -17,7 +17,7 @@ const treatments = [
   {
     title: "Pediatric Physiotherapy",
     desc: "Gentle and structured therapy for developmental delays, cerebral palsy, coordination issues, low tone, high tone and gait abnormalities in children.",
-    image: "https://res.cloudinary.com/dwse1tffo/image/upload/v1763905900/Pediatric_Physiotherapy_vmth9z.jpg",
+    image: "https://res.cloudinary.com/dwse1tffo/image/upload/v1765076124/pediatric_fbgmrn.jpg",
     category: "Pediatric Care"
   },
   {
@@ -71,7 +71,7 @@ const treatments = [
   {
     title: "Electrotherapy & Modalities",
     desc: "TENS, IFT, Ultrasound, EMS, cryotherapy, heat therapy and more to reduce pain, inflammation and muscle spasm.",
-    image: "https://res.cloudinary.com/dwse1tffo/image/upload/v1763905900/Electrotherapy_Modalities_dj1phr.jpg",
+    image: "https://res.cloudinary.com/dwse1tffo/image/upload/v1765076124/electro_pcpeir.jpg",
     category: "Electrotherapy"
   }
 ];
@@ -111,8 +111,9 @@ export default function TreatmentsPage() {
               className="rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden hover:shadow-md transition"
             >
               <div className="relative h-44">
-                <Image src={t.image} alt={t.title} fill className="object-cover" />
-              </div>
+                {/* UPDATED: Added object-[50%_55%] to shift image content down slightly */}
+                <Image src={t.image} alt={t.title} fill className="object-cover object-[50%_40%]" /> 
+              </div>
 
               <div className="p-4">
                 <p className="text-xs text-emerald font-medium">{t.category}</p>
