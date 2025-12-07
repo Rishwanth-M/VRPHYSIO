@@ -132,11 +132,11 @@ export default function PilatesPage() {
         </div>
         <div className="relative h-64 rounded-2xl overflow-hidden">
           <Image
-            src="https://res.cloudinary.com/dwse1tffo/image/upload/v1763918107/IMG-20251122-WA0001_gc83nk.jpg"
-            alt="Clinical Pilates"
-            fill
-            className="object-cover"
-          />
+    src="https://res.cloudinary.com/dwse1tffo/image/upload/v1765074612/WhatsApp_Image_2025-12-06_at_06.27.36_37ed9b41_fcuphq.jpg"
+    alt="Clinical Pilates"
+    fill
+    className="object-contain"
+/>
         </div>
       </section>
 
